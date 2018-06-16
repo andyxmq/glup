@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="container" ng-app="TodoList" ng-controller="TodosController">
+        <div class="todos list-group">
+            <div class="list-group-item todo" ng-repeat="todo in todos track by $index" ng-controller="TodoController">
+                <span>{{todo.name}}</span>
+                <button type="button" class="close" aria-label="Close" ng-click="deleteTodo(todo)">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        <div class="input-group " ng-controller="AddTodoController">
+            <input class="form-control" type="text" ng-model="newTodo" placeholder="newTodo"/>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="addTodo(newTodo)">Add</button>
+            </span>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/libs/angular.js"></script>
+    <script type="text/javascript" src="js/libs/lodash.js"></script>
+    <script type="text/javascript" src="js/todos-controller.js"></script>
+    <script type="text/javascript" src="js/add-todo-controller.js"></script>
+    <script type="text/javascript" src="js/todo-controller.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
