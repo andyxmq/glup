@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "glup"
+    "build": "node C:/Users/andy/AppData/Roaming/npm/node_modules/gulp/bin/gulp.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,36 @@
   },
   "homepage": "https://github.com/andyxmq/glup#readme",
   "devDependencies": {
-    "glup": "^1.0.14"
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browserify-shim": "^3.8.14",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "angular": "angular",
+    "lodash": "_"
+  },
+  "browser": {
+    "angular": "./bower_components/angular/angular.js",
+    "lodash": "./bower_components/lodash/dist/lodash.js"
+  },
+  "dependencies": {
+    "browserify": "^16.2.2",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.2",
+    "gulp-if-else": "^1.0.3",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1",
+    "sequence": "^3.0.0",
+    "shelljs": "^0.8.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0"
   }
 }
