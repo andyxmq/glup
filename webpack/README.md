@@ -7,6 +7,12 @@ version: 3.8.1
 1.code splitting
 2.loaders
 3.plugin System
+4.支持所有的主流打包标准(CommonJS、AMD、UMD、Globals)
+5.可以通过不同的的webpack loader，支持打包css、scss、json、markdown等格式文件
+6.有完善的缓存破坏/散列
+7.内置热重载功能
+8.有一系列的优化方案和插件机制来满足各种需求
+
 
 #bundle.js 所有的打包目标文件
 
