@@ -40,3 +40,11 @@ require('!style-loader!css-loader!./style.css');
  5.服务端环境安装
  通过安装webpack-dev-server模块，可以将项目打包到服务端，并可以指定端口，同时 还可以配置启动命令
  npm install webpack-dev-server
+
+ 6.React-router 
+ history属性：用来监听浏览器的变化,并将URL解析一个地址对象，功React-Router匹配 有三种值：
+ 1.hashHistory
+ 2.browerHistory
+ 3.createMemoryHistory
+
+ 7.antd babel-plugin-import: 用来按需加载antd的脚本和样式

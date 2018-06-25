@@ -33,7 +33,7 @@ module.exports   = {
     resolve: {
         extensions: ['.js','.jsx','.less','.scss','.css'],
         alias: {
-            CommonComponent: path.resolve(__dirname,'src/components')
+            CommonComponent: path.resolve(__dirname,'src/components'),
         }
     },
     plugins:[
@@ -45,5 +45,6 @@ module.exports   = {
     ],
     devServer:{
         port: 8081,
+        historyApiFallback: true
     }
 };
