@@ -48,3 +48,16 @@ require('!style-loader!css-loader!./style.css');
  3.createMemoryHistory
 
  7.antd babel-plugin-import: 用来按需加载antd的脚本和样式
+
+在项目目录下执行：npm i antd -S 安装组件包
+执行：npm i babel-plugin-import -D 安装一个babel插件用于做组件的按需加载（否则项目会打包整个组件库，非常大）
+根目录下新建.roadhogrc文件（别忘了前面的点，这是roadhog工具的配置文件，下面的代码用于加载上一个命令安装的import插件），写入：
+{
+  "extraBabelPlugins": [
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "lib",
+      "style": "css"
+    }]
+  ]
+}

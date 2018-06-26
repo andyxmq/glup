@@ -6,7 +6,7 @@ module.exports   = {
     devtool: 'cheap-module-eval-source-map',
     entry: {
         app: './src/pages/home/index.jsx',
-        vendors: ["react","react-dom"]
+        vendors: ["react","react-dom","antd"]
     },
     output: {
         path:path.resolve(__dirname,'dist'),
@@ -39,12 +39,12 @@ module.exports   = {
     plugins:[
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Custom template',
+            title: 'Organic agricultural products',
             template: 'index.html'
         }),
     ],
     devServer:{
-        port: 8081,
+        port: 7888,
         historyApiFallback: true
     }
 };

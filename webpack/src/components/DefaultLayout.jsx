@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
-
+import 'antd/dist/antd.css'
 class DefaultLayout extends Component{
     render(){
         return <Layout>
