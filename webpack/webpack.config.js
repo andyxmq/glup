@@ -33,7 +33,8 @@ module.exports   = {
     resolve: {
         extensions: ['.js','.jsx','.less','.scss','.css'],
         alias: {
-            CommonComponent: path.resolve(__dirname,'src/components'),
+            CommonComponent: path.resolve(__dirname,'src/common/components.jsx'),
+            CommonConstants: path.resolve(__dirname,'src/common/constant.jsx'),
         }
     },
     plugins:[
