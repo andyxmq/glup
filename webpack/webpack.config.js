@@ -35,6 +35,7 @@ module.exports   = {
         alias: {
             CommonComponent: path.resolve(__dirname,'src/common/components.jsx'),
             CommonConstants: path.resolve(__dirname,'src/common/constant.jsx'),
+            CommonContainer: path.resolve(__dirname,'src/common/container.jsx'),
         }
     },
     plugins:[
