@@ -50,6 +50,7 @@ module.exports   = {
     ],
     devServer:{
         port: 7888,
-        historyApiFallback: true
+        historyApiFallback: true,//  history={browserHistory}
+        inline: true, //开启页面自动刷新
     }
 };
