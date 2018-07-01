@@ -16,8 +16,8 @@ module.exports   = {
     module:{
         loaders: [
             {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                test: /\.less$/,
+                loader: 'style-loader!css-loader!less-loader'
             },
             {
                 test: /\.(js|jsx)$/,
@@ -38,9 +38,9 @@ module.exports   = {
             // CommonComponent: path.resolve(__dirname,'src/common/components.jsx'),
             // CommonConstants: path.resolve(__dirname,'src/common/constant.jsx'),
             // CommonContainer: path.resolve(__dirname,'src/common/container.jsx'),
-            Components: path.resolve(__dirname,'src/components/index'),
-            Comtainers: path.resolve(__dirname,'src/containers/index'),
-            Constants: path.resolve(__dirname,'src/contants/index'),
+            // Components: path.resolve(__dirname,'src/components/index'),
+            // Comtainers: path.resolve(__dirname,'src/containers/index'),
+            // Constants: path.resolve(__dirname,'src/contants/index'),
         }
     },
     plugins:[
@@ -52,7 +52,7 @@ module.exports   = {
     ],
     devServer:{
         port: 7888,
-        historyApiFallback: true,//  history={browserHistory}
-        inline: true, //开启页面自动刷新
+        // historyApiFallback: true,//  history={browserHistory}
+        // inline: true, //开启页面自动刷新
     }
 };

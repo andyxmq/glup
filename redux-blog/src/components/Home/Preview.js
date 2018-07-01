@@ -1,9 +1,12 @@
+/**
+ * @description: 文章预览组件
+ */
 import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 
-import './Preview.css';
+import './Preview.less';
 //React.PropTypes助手函数已被弃用
-class Preview extends Comment{
+class Preview extends Component{
     render(){
         return (
             <article className="article-preview-item">
@@ -16,7 +19,8 @@ class Preview extends Comment{
 }
 
 Preview.propTypes = {
-    title: PropTypes.string
+    title: PropTypes.string,
+    link: PropTypes.string
 };
 
 export default Preview;

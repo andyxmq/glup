@@ -3,9 +3,11 @@ import { Link } from 'react-router';
 
 class Nav extends Component{
     render(){
-        return <nav>
-            <Link to="/">Home</Link>
-        </nav>
+        return (
+            <nav>
+                <Link to="/">Home</Link>
+            </nav>
+        )
     }
 }
 export default Nav;

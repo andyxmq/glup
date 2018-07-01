@@ -1,3 +1,6 @@
+/**
+ * 包含对应组件需要的reducer action creator、constants
+ */
 const initialState = {
     loading: true,
     error: false,
@@ -8,14 +11,14 @@ const LOAD_ARTICLES = 'LOAD_ARTICLES';
 const LOAD_ARTICLES_SUCCESS = 'LOAD_ARTICLES_SUCCESS';
 const LOAD_ARTICLES_ERROR = 'LOAD_ARTICLES_ERROR';
 
-export function loadArticles(){
+export function loadArticles(){//actions 
     return {
         types: [LOAD_ARTICLES,LOAD_ARTICLES_SUCCESS,LOAD_ARTICLES_ERROR],
         url: '/api/article.json'
     };
 }
 
-function previewList(state = initialState,action){
+function previewList(state = initialState,action){//reducer
     switch(action.type){
         case LOAD_ARTICLES: {
             return {
