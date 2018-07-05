@@ -11,9 +11,10 @@ const finalCreateStore = compose(
 )(createStore);
 
 const reducer = combineReducers(Object.assign({},rootReducer,{
-    routing: rootReducer
+    routing: routerReducer
 }));
 
 export default function configureStore(initialStore){
     const store = finalCreateStore(reducer,initialStore);
+    return store;
 }
